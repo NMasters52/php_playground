@@ -9,7 +9,11 @@
 <body>
     
 <?php
-    echo "<h1 class='text-red-200'>hello world</h1>";
+    function createTitle($title) {
+        echo "<h1>{$title}</h1>";
+    }
+
+    createTitle('hello world');
 ?>
 </body>
 </html>
