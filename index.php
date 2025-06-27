@@ -9,11 +9,12 @@
 <body>
     
 <?php
-    function createTitle($title) {
-        echo "<h1>{$title}</h1>";
+    require './functional/functional.php';
+    $electronics = filterByCategory($products, 'electronics');
+    foreach ($electronics as $product) {
+        echo $product['name'] . "<br>";
     }
-
-    createTitle('hello world');
+    print_r($electronics);
 ?>
 </body>
 </html>
