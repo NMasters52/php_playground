@@ -32,29 +32,19 @@
 	];
 
 
-    class ProductCard {
-       public $props = [];
-
-       public function __construct($props)
-       {
-        $this->props = $props;
-       }
-
-       public function render() {
-            $product = $this->props['product'];
-            $showCategory = $this->props['showCategory'] ?? false;
-            $html = "<h3>{$product['name']}</h3>";
-            
-            if ($showCategory) {
-                $stockText = $product['inStock'] ? 'in stock' : 'out of stock';
-                $html .= "<p>{$stockText}</p>";
-            }
-            return $html;
+    function displayProductCard($products) {
+        foreach($products as $product) {
+            echo "
+            <h1 class='text-red-200'>{$product['name']}</h1>
+            ";
         }
     }
-        
-    $cardContent = new ProductCard(['product'=>$products[0]]);
-    echo $cardContent->render();
+
+    echo displayProductCard($products);
+
+
+
+  
 
 ?>
 
