@@ -42,10 +42,10 @@
 
        public function render() {
             $product = $this->props['product'];
-            $showProduct = $this->props['showCategory'];
+            $showCategory = $this->props['showCategory'] ?? false;
             $html = "<h3>{$product['name']}</h3>";
             
-            if ($showProduct) {
+            if ($showCategory) {
                 $stockText = $product['inStock'] ? 'in stock' : 'out of stock';
                 $html .= "<p>{$stockText}</p>";
             }
@@ -53,22 +53,10 @@
         }
     }
         
-    $cardContent = new ProductCard(['product'=>$products[0], 'showCategory'=>false]);
+    $cardContent = new ProductCard(['product'=>$products[0]]);
     echo $cardContent->render();
 
 ?>
-
-<br/>
-
-<div class="border-2 border-black-500 w-1/2 mx-auto p-2">
-    <div class="border-2 border-red-200">
-        <img src="" alt="">
-    </div>
-    <p>Name</p>
-    <p>price</p>
-    <p>catagory</p>
-    <p>In Stock</p>
-</div>
 
 </body>
 </html>
