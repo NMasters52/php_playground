@@ -59,15 +59,15 @@ class AssignmentCard {
 
         //this is what is displayed to the screen
         echo " 
-            <main class='border-red-200 border-2 w-full px-4 py-8'> 
-                    <h3 class='border-2 border-yellow-500'>{$title}</h3>
+            <main class='bg-gray-100 w-full p-4 rounded-md'> 
+                    <h3 class=''>{$title}</h3>
                 
-                <div class='grid md:grid-cols-2 gap-6'>
-                    <ul class='list-disc marker:text-indigo-700 pl-5'>{$languageItems}</ul>
+                <div class=''>
+                    <ul class=''>{$languageItems}</ul>
                     <ul>{$conceptItems}</ul>
                 </div>
                     
-                    <ul class='border-2 border-blue-700'>{$requirementItems}</ul>
+                    <ul class=''>{$requirementItems}</ul>
                     <button class='mt-2 p-2 bg-blue-700 rounded-md text-white hover:bg-blue-500 cursor-pointer'>{$demoLinkButton}</button>
             </main>    
         ";

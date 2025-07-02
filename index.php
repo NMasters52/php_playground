@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div class="mx-auto w-[350px] md:w-[640px] xl:w-[1132px]">
+<div class="mx-auto w-[350px] md:w-[640px] xl:w-[1132px] mt-2">
     <?php   include('ui_components/assignment.php'); ?>
 </div>
 
